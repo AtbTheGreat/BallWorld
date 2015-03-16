@@ -1,0 +1,15 @@
+public class PullString
+{
+  private int x1, y1, x2, y2;
+  public PullString(int x01, int y01, int x02, int y02)
+  {
+    x1=x01;
+    y1=y01;
+    x2=x02;
+    y2=y02;
+  }
+  public void draw(Graphics g)
+  {
+    g.drawLine(x1, y1, x2, y2);
+  }
+}

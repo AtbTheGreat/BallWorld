@@ -1,0 +1,29 @@
+import java.awt.Graphics;
+import java.awt.Rectangle;
+public class GameField
+{
+  Rectangle m_bounds;
+  public GameField(int x, int y, int width, int height)
+  {
+    m_bounds=new Rectangle(x, y, width, height);
+  }
+  public void draw(Graphics g)
+  {
+    g.drawRect(m_bounds.x, m_bounds.y, m_bounds.width, m_bounds.height);
+  }
+  public void getBounds()
+  {
+    return m_bounds;
+  }
+  public boolean boundsCheck(int x, int y)
+  {
+    if(m_bounds.x<x && x<(m_bounds.x+m_bounds.width))
+    {
+      if(m_bounds.y<y && y<(m_bounds.y+m_bounds.height))
+      {
+        return true;
+      }
+    }
+    return false;
+  }
+}
